@@ -17,7 +17,7 @@ public class Solution2 {
             else if (nums[i] == 2)
                 swap(nums, i, --two);
             else{ // nums[i] == 0
-                assert nums[i] == 0;
+                assert nums[i] == 0;//确保数组中元素为0,1,2,使得代码更严谨
                 swap(nums, ++zero, i++);
             }
         }
