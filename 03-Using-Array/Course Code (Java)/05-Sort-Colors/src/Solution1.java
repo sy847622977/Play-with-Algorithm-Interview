@@ -4,14 +4,14 @@
 // 计数排序的思路
 // 对整个数组遍历了两遍
 // 时间复杂度: O(n)
-// 空间复杂度: O(k), k为元素的取值范围
+// 空间复杂度: O(k), k为元素的取值范围，本问题中为O（3），即O（1）
 public class Solution1 {
 
     public void sortColors(int[] nums) {
 
         int[] count = {0, 0, 0};    // 存放0, 1, 2三个元素的频率
         for(int i = 0 ; i < nums.length ; i ++){
-            assert nums[i] >= 0 && nums[i] <= 2;
+            assert nums[i] >= 0 && nums[i] <= 2;//使用断言防止输入错误
             count[nums[i]] ++;
         }
 
